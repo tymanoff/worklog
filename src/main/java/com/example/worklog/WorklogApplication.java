@@ -8,6 +8,7 @@ public class WorklogApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(WorklogApplication.class, args);
+
     }
 
 }
