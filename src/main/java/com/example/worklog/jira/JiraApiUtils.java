@@ -16,6 +16,7 @@ public class JiraApiUtils
 
     private static JiraClient connect;
 
+
     //Connect to jira rest api
 //    public static void jiraConnect()
 //    {
