@@ -27,6 +27,8 @@ dependencies {
 
     implementation 'org.telegram:telegrambots-spring-boot-starter:6.0.1'
     implementation 'net.rcarz:jira-client:0.5'
+    implementation group: 'log4j', name: 'log4j', version: '1.2.16'
+    implementation 'com.mashape.unirest:unirest-java:1.4.9'
 }
 
 tasks.named('test') {
