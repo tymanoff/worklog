@@ -26,6 +26,8 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
     implementation 'org.telegram:telegrambots-spring-boot-starter:6.0.1'
+    implementation 'com.mashape.unirest:unirest-java:1.4.9'
+    implementation 'org.telegram:telegrambots:6.1.0'
 }
 
 tasks.named('test') {

@@ -1,3 +1,9 @@
 bot:
   name: Jiro_work_log_bot
-  token: token
+  token: tok
+
+jira:
+  urljira: https://t.atlassian.net
+  urlissue: /rest/api/3/issue/
+  user: user
+  tok: tok
