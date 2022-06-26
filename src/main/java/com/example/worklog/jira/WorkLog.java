@@ -13,9 +13,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
 
 @Component
 public class WorkLog {
+
+    private LocalDateTime ldt = LocalDateTime.now();
 
     @Value("${jira.user}") // hide user
     private String user;
@@ -34,7 +37,7 @@ public class WorkLog {
         ObjectNode payload = jnf.objectNode();
         {
             payload.put("timeSpent", userData.getWorkLog());
-            payload.put("started", "2022-01-13T13:41:00.000+0000");
+            payload.put("started", ldt.toString().substring(0,ldt.toString().length()-6) + "000+0000");
 
             ObjectNode comment = payload.putObject("comment");
             {

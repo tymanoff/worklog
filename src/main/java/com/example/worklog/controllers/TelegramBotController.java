@@ -34,12 +34,12 @@ public class TelegramBotController {
         if(messageText.equals("/issue")){
             return answer(message, Consts.ISSUE);
         }
-        if (messageText.equals("TEL-1")){
+        if (messageText.matches("[A-Z]{3}-\\d")){
             userData.setIssue(messageText);
             userDataCache.saveUserData(userId,userData);
             return answer(message, Consts.WORKLOG);
         }
-        if (messageText.equals("1h 30m")){
+        if (messageText.matches("[1-9]h [1-5]\\dm")||messageText.matches("[1-9]h")){
             userData.setWorkLog(messageText);
             userDataCache.saveUserData(userId,userData);
             return answer(message, Consts.TEXT);
